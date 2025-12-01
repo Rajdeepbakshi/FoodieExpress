@@ -1,0 +1,103 @@
+/* fixed-height navbar (does not grow) */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;            /* fixed navbar height */
+  padding: 0 25px;         /* horizontal space */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps menu centered */
+  background: white;
+  z-index: 1000;
+  /* box-shadow: 0 1px 0 rgba(0,0,0,0.06); */
+  overflow: visible;       /* allow larger logo to overflow */
+  position: relative;      /* container for absolute children */
+}
+
+/* logo removed from flow — will not affect navbar height */
+.logo {
+  position: absolute;
+  left: 24px;              /* distance from left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 220px;           /* large visual size without increasing navbar */
+  width: auto;
+  pointer-events: auto;
+}
+
+/* center menu (remains in normal flow) */
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #49557e;
+}
+
+/* right-side group absolutely positioned to vertically center */
+.navbar-right {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* small icon size so they don't change navbar height */
+.navbar-right img {
+  height: 28px;
+  width: auto;
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon img {
+  height: 28px;
+}
+
+.dot {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-height: 10px;
+  min-width: 10px;
+  background: tomato;
+  border-radius: 5px;
+}
+
+/* sign-in button */
+.navbar button {
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid brown;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #49557e;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}

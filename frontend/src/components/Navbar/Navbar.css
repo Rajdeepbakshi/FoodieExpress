@@ -20,11 +20,11 @@
 /* logo removed from flow — will not affect navbar height */
 .logo {
   position: absolute;
-  left: 24px;              /* distance from left edge */
+  left: 0;              /* distance from left edge */
   top: 50%;
   transform: translateY(-50%);
-  height: 220px;           /* large visual size without increasing navbar */
-  width: auto;
+  height: auto;           /* large visual size without increasing navbar */
+  width: 220px;
   pointer-events: auto;
 }
 
@@ -123,7 +123,7 @@
 
 @media (max-width:900px) {
   .navbar .logo {
-    width: 120px;
+    width: 135px;
   }
   .navbar-menu {
     gap: 100px;
